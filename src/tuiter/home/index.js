@@ -1,5 +1,5 @@
 import React from "react";
-import PostSummaryList1 from "../home-component/index.js";
+import PostSummaryList1 from "../home-posts/index.js";
 
 const HomeComponent = () => {
     return(
