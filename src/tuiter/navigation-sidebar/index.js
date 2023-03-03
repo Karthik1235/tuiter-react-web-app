@@ -17,9 +17,6 @@ const NavigationSidebar = () => {
                 <i className="bi bi-hash pe-1"></i>
                 Explore
             </Link>
-            <Link to="/" className="list-group-item">
-                Labs
-            </Link>
             <a href="#" className={`list-group-item ${active === 'notifications'?'active':''}`}>
                 <i className="bi bi-bell-fill pe-1"></i>
                 Notifications
