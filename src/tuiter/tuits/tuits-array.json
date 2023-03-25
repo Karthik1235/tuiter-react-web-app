@@ -8,12 +8,12 @@
     "time": "23h",
     "tuit": "Dennis and Akiko Tito are the first two crewmembers on Starship's second commercial spaceflight around the moon",
     "tuitTextLink": "trib.al/nx2Gfaq",
-    "hasImage": false,
+    "hasImage": true,
     "image": "spacex-post.jpeg",
     "hasLink": false,
     "replies": "595",
-    "retuits": "1.1K",
-    "likes": "11.1k",
+    "retuits": "234",
+    "likes": "456",
     "liked": true
   },
   {
@@ -25,11 +25,11 @@
     "time": "15h",
     "tuit": "We might need a different name as this is basically just Starlink with roaming capacity, so you can take your terminal anywhere",
     "hasImage": true,
-    "image": "inspiration4.jpeg",
+    "image": "inspiration-mission.jpeg",
     "hasLink": true,
-    "replies": "5.3K",
-    "retuits": "1.6K",
-    "likes": "19.2K",
+    "replies": "130",
+    "retuits": "160",
+    "likes": "192",
     "liked": false
   }
 ]

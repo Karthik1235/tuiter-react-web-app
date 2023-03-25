@@ -19,7 +19,7 @@ const getPostTime = (post) => {
 
 const checkImage = (post) => {
     if(post.hasImage){
-        return <img className="w-100 img-fluid rounded-top border-bottom border-secondary" src={`/tuiter/images/${post.image}`}/>;
+        return <img className="w-100 img-fluid rounded-top border-bottom border-secondary" src={`../../../tuiter/images/${post.image}`}/>;
     }
     return "";
 }
@@ -76,7 +76,11 @@ const TuitItem = (
                 <div className="ps-2"> <b>{post.userName}</b> {checkVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostTime(post)}</span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
-                    <p className="ps-1"> {renderTuit(post)} <a className="text-decoration-none"> {post.tuitTextLink} </a> </p>
+                    <p className="ps-1"> {renderTuit(post)}
+                        <a className="text-decoration-none"> {post.tuitTextLink}
+                        </a>
+                    </p>
+                    {checkImage(post)}
                     <TuitStats key={post._id} post={post}/>
                 </div>
             </div>
