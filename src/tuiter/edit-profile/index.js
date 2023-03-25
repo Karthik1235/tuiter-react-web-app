@@ -25,10 +25,10 @@ const EditProfile = () => {
 
         <div className="row">
             <div>
-                <Link to="/tuiter/profile" className="rounded-pill btn btn-dark fw-bold"> X </Link>
+                <Link to="/tuiter/profile1" className="rounded-pill btn btn-dark fw-bold"> X </Link>
 
                 <span class=" ms-5 wd-title-size fw-bold">Edit Profile</span>
-                <span><Link to="/tuiter/profile" className="btn btn-dark fw-bold rounded-pill float-end mb-2"
+                <span><Link to="/tuiter/profile1" className="btn btn-dark fw-bold rounded-pill float-end mb-2"
                             onClick={editProfileHandler}>Save
                 </Link></span>
             </div>
