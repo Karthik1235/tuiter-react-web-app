@@ -1,0 +1,23 @@
+.form-control.wd-color {
+    color: rgb(110, 118, 125);
+}
+
+span.wd-title-size {
+    font-size: 20px;
+}
+
+.wd-banner-image {
+    height: 250px;
+}
+
+div.wd-tuit-font {
+    font-size: 14px;
+}
+
+.wd-profile-picture {
+    height: 140px;
+    width: 150px;
+    top: 185px;
+    left: 25px;
+}
+

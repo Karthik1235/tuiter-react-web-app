@@ -1,0 +1,82 @@
+import React from "react";
+import {Link} from "react-router-dom";
+
+
+const UserProfile = (
+    {
+        profile = {
+            firstName: 'Elon',
+            lastName: 'Musk',
+            handle: 'elonmusk',
+            profilePicture: 'elon-musk-img.jpeg',
+            bannerPicture: '../../../tuiter/images/spacex-starship.jpeg',
+            bio: 'Creating tech to disrupt the world.',
+            website: 'www.twitter.com/elonmusk',
+            location: 'Fremont, CA',
+            dateOfBirth: '21/07/1978',
+            dateJoined: '4/2009',
+            followingCount: 9832,	followersCount: 63655, tuits: "1024"
+        }
+    }
+) => {
+    return(
+        <div className="row">
+            <div className="col-1">
+                <button className="bg-white border-0"></button>
+            </div>
+            <div className="col-10">
+                <div className="wd-name-font">
+                    <span className="fw-bold ">{profile.firstName} </span>
+                    <span className="fw-bold">{profile.lastName}</span> <br/>
+                </div>
+                <div className="wd-tuit-font ms-1">
+                    <span>{profile.tuits} </span>
+                    <span>Tuits</span>
+                </div>
+            </div>
+            <div className="mt-0 ms-0 position-relative">
+                <img className="w-100 ms-0 mt-0 wd-banner-image border-0" src={`${profile.bannerPicture}`}  />
+                <img className="wd-profile-picture position-absolute rounded-circle border-0" src={`${profile.profilePicture}`} />
+            </div>
+
+            <div className="mt-2">
+                <Link to="/tuiter/edit-profile" className="btn btn-outline-dark rounded-pill float-end fw-bold">Edit profile</Link>
+            </div>
+
+            <div>
+                <div className="mt-5 wd-name-font">
+                    <span className="fw-bold ">{profile.firstName} </span>
+                    <span className="fw-bold">{profile.lastName}</span>
+                </div>
+                <div className="text-secondary wd-tuit-font">
+                    <span>@{profile.handle} </span>
+                </div>
+                <div className={"mt-3"}>
+                    <p>{profile.bio}</p>
+                </div>
+                <div className="row text-secondary">
+                    <div className="col-3">
+                        <span><i className="bi bi-geo-alt me-2"></i></span>
+                        <span>{profile.location}</span>
+                    </div>
+                    <div className="col-3">
+                        <span><i className="bi bi-balloon me-2"></i></span>
+                        <span>Born {profile.dateOfBirth}</span>
+                    </div>
+                    <div className="col-6">
+                        <span><i className="bi bi-calendar3 me-2"></i></span>
+                        <span>Joined {profile.dateOfBirth}</span>
+                    </div>
+                </div>
+                <div className="mt-3">
+                    <span className="fw-bold">{profile.followingCount}</span>
+                    <span className="ms-1">Following</span>
+                    <span className="fw-bold ms-4">{profile.followersCount}</span>
+                    <span className="ms-1">Followers</span>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default UserProfile;

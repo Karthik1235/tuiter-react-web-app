@@ -1,0 +1,16 @@
+{
+  "_id": 1234,
+  "firstName": "Elon",
+  "lastName": "Musk",
+  "handle": "elonmusk",
+  "profilePicture": "../../../tuiter/images/elon-musk-img.jpeg",
+  "bannerPicture": "../../../tuiter/images/spacex-starship.jpeg",
+  "bio": "Creating a life on Mars",
+  "website": "twitter.com",
+  "location": "San Jose, CA",
+  "dateOfBirth": "4/4/1998",
+  "dateJoined": "5/2010",
+  "followingCount": 2300,
+  "followersCount": 45130,
+  "tuits": "2399"
+}
