@@ -9,7 +9,7 @@ import PostSummaryList from "./post-summary-list/";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
 import tuitsArrayReducer from "./reducers/tuits-array-reducer";
-import ProfileComponent from "./profile";
+import ProfileComponent from "./profile1";
 import EditProfile from "./edit-profile";
 import tuitsReducer from "./tuits/tuits-reducer";
 import whoReducer from "./reducers/who-reducer";
@@ -30,7 +30,7 @@ function Tuiter() {
                     <Routes>
                         <Route path="home"    element={<HomeComponent/>}/>
                         <Route path="explore1" element={<ExploreComponent/>}/>
-                        <Route path="profile" element={<ProfileComponent/>}/>
+                        <Route path="profile1" element={<ProfileComponent/>}/>
                         <Route path="edit-profile" element={<EditProfile/>}/>
                     </Routes>
                 </div>
@@ -38,7 +38,7 @@ function Tuiter() {
                     <Routes>
                         <Route path="home"    element={<PostSummaryList/>}/>
                         <Route path="explore1" element={<WhoToFollowList/>}/>
-                        <Route path="profile" element={<WhoToFollowList/>}/>
+                        <Route path="profile1" element={<WhoToFollowList/>}/>
                         <Route path="edit-profile" element={<WhoToFollowList/>}/>
                     </Routes>
                 </div>
