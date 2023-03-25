@@ -3,21 +3,21 @@ import TuitStats from "./tuit-stats";
 import {useDispatch} from "react-redux";
 import {deleteTuit} from "../reducers/tuits-array-reducer";
 
-const checkVerified = (post) => {
+const checkIfVerified = (post) => {
     if(post.verified){
         return <i className="ps-1 text-primary bi bi-check-circle-fill"/>
     }
     return "";
 }
 
-const getPostTime = (post) => {
+const getPostsTiming = (post) => {
     if(post.time){
         return `· ${post.time}`;
     }
     return "";
 }
 
-const checkImage = (post) => {
+const checkIfImage = (post) => {
     if(post.hasImage){
         return <img className="w-100 img-fluid rounded-top border-bottom border-secondary" src={`../../../tuiter/images/${post.image}`}/>;
     }
@@ -73,14 +73,14 @@ const TuitItem = (
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(post._id)}></i>
                 <a className="float-end text-secondary" href="#"> <i className="fa-solid fa-ellipsis"></i> </a>
-                <div className="ps-2"> <b>{post.userName}</b> {checkVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostTime(post)}</span>
+                <div className="ps-2"> <b>{post.userName}</b> {checkIfVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostsTiming(post)}</span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
                     <p className="ps-1"> {renderTuit(post)}
                         <a className="text-decoration-none"> {post.tuitTextLink}
                         </a>
                     </p>
-                    {checkImage(post)}
+                    {checkIfImage(post)}
                     <TuitStats key={post._id} post={post}/>
                 </div>
             </div>

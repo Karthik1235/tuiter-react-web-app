@@ -19,9 +19,15 @@ const TuitStats = (
 
 
     return(
-        <ul className="d-flex justify-content-between list-group list-group-horizontal">
-            <li className="list-group-item text-nowrap border-0 override-lg text-secondary "> <a href="#" className="text-decoration-none text-secondary ">
-                <i className="bi bi-chat text-muted pe-1"/> <span className='text-secondary '> {post.replies} </span> </a></li>
+        <ul className=" list-group justify-content-between list-group-horizontal d-flex">
+            <li className="override-lg text-nowrap border-0  text-secondary list-group-item">
+                <a href="#" className="text-decoration-none text-secondary ">
+                    <i className="bi bi-chat text-muted pe-1"/>
+                    <span className='text-secondary '>
+                        {post.replies}
+                    </span>
+                </a>
+            </li>
 
             <li className="list-group-item text-nowrap border-0 text-secondary override-lg">
                 <a href="#" className="text-secondary text-decoration-none">
@@ -35,7 +41,7 @@ const TuitStats = (
             { !post.liked &&
               <button
                   onClick={() => likeTuitHandler(post)}
-                  className="list-group-item text-nowrap border-0 text-secondary override-lg">
+                  className="list-group-item border-0 text-secondary override-lg text-nowrap">
                   <i className="bi bi-heart text-muted pe-1"/>
                   <span className='ms-1'>
                       {post.likes}
@@ -47,8 +53,8 @@ const TuitStats = (
                 post.liked &&
                 <button
                     onClick={() => unlikeTuitHandler(post)}
-                    className="list-group-item text-nowrap border-0 text-secondary override-lg">
-                    <i className="bi bi-heart text-muted pe-1"/>
+                    className="list-group-item border-0 text-secondary override-lg text-nowrap">
+                    <i className="bi bi-heart text-danger pe-1"/>
                     <span className='ms-1'>
                         {post.likes}
                     </span>
