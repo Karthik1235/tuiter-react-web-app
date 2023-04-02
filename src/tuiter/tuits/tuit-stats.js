@@ -1,6 +1,7 @@
 import {useDispatch} from "react-redux";
 import {likeTuit, unlikeTuit} from "../reducers/tuits-array-reducer";
 import {useSelector} from "react-redux";
+import { updateTuitThunk } from '../../services/tuits-thunks';
 
 const TuitStats = (
     {
@@ -8,15 +9,6 @@ const TuitStats = (
     }
 ) => {
     const dispatch = useDispatch();
-
-    const likeTuitHandler = (post) => {
-        dispatch(likeTuit(post))
-    }
-
-    const unlikeTuitHandler = (post) => {
-        dispatch(unlikeTuit(post))
-    }
-
 
     return(
         <ul className=" list-group justify-content-between list-group-horizontal d-flex">
@@ -38,27 +30,17 @@ const TuitStats = (
                 </a>
             </li>
 
-            { !post.liked &&
-              <button
-                  onClick={() => likeTuitHandler(post)}
-                  className="list-group-item border-0 text-secondary override-lg text-nowrap">
-                  <i className="bi bi-heart text-muted pe-1"/>
-                  <span className='ms-1'>
-                      {post.likes}
-                  </span>
-              </button>
-            }
+            {<div className='pt-2'>
+                <i onClick={() => dispatch(updateTuitThunk({...post, likes: post.likes + 1}))}
+                   className="bi bi-heart-fill me-2 text-danger"></i>
+                {post.likes}
+            </div>}
 
-            {
-                post.liked &&
-                <button
-                    onClick={() => unlikeTuitHandler(post)}
-                    className="list-group-item border-0 text-secondary override-lg text-nowrap">
-                    <i className="bi bi-heart text-danger pe-1"/>
-                    <span className='ms-1'>
-                        {post.likes}
-                    </span>
-                </button>
+            {<div className='pt-2'>
+                <i onClick={() => dispatch(updateTuitThunk({...post, dislikes: post.dislikes + 1}))}
+                   className="bi bi-hand-thumbs-down me-2 text-secondary"></i>
+                    {post.dislikes}
+                </div>
             }
 
             <li className="list-group-item text-nowrap border-0 text-secondary override-lg">
