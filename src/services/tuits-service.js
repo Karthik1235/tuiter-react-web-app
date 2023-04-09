@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_BASE = process.env.REACT_APP_API_BASE;
+const API_BASE = process.env.REACT_APP_API_BASE_Heroku || process.env.REACT_APP_API_BASE;
 const TUITS_API = `${API_BASE}/tuits`;
 
 export const createTuit = async (tuit) => {
@@ -21,3 +21,4 @@ export const updateTuit = async (tuit) => {
         .put(`${TUITS_API}/${tuit._id}`, tuit);
     return tuit;
 }
+h
