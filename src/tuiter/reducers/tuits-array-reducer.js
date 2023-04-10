@@ -11,7 +11,7 @@ const initialState = {
 const currentUser = {
     "userName": "NASA",
     "handle": "nasa",
-    "avatarIcon": "nasa_logo.png",
+    "avatarIcon": "NASA_logo.png",
 };
 
 const templateTuit = {
@@ -22,6 +22,7 @@ const templateTuit = {
     "replies": 0,
     "retuits": 0,
     "likes": 0,
+    "dislikes": 0
 }
 
 const tuitsArraySlice = createSlice(
@@ -70,9 +71,6 @@ const tuitsArraySlice = createSlice(
                         ...payload
                     }
                 }
-
-
-
 
         },
         reducers: {
