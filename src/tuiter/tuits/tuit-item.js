@@ -25,10 +25,17 @@ const checkIfImage = (post) => {
 }
 
 const checkProfileImage = (post) => {
-    if(post.image==""){
+    if(post.image!=""){
         return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>;
     }
     return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/NASA_logo.png`}/>;
+}
+
+const checkHandle = (post) => {
+    if(post.handle!=""){
+        return @{post.handle};
+    }
+    return @NASA;
 }
 
 const checkLink = (post) => {
@@ -80,7 +87,12 @@ const TuitItem = (
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(post._id)}></i>
                 <a className="float-end text-secondary" href="#"> <i className="fa-solid fa-ellipsis"></i> </a>
-                <div className="ps-2"> <b>{post.userName}</b> {checkIfVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostsTiming(post)}</span>
+                <div className="ps-2">
+                    <b>{post.userName}</b>
+                    {checkIfVerified(post)}
+                    <span className = "ps-1 text-secondary">
+                    {checkHandle(post)} {getPostsTiming(post)}
+                </span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
                     <p className="ps-1"> {renderTuit(post)}
