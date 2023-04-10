@@ -33,9 +33,9 @@ const checkProfileImage = (post) => {
 
 const checkHandle = (post) => {
     if(post.handle!=""){
-        return `@{post.handle}`;
+        return {post.handle};
     }
-    return `@NASA`;
+    return `NASA`;
 }
 
 const checkLink = (post) => {
@@ -91,7 +91,7 @@ const TuitItem = (
                     <b>{post.userName}</b>
                     {checkIfVerified(post)}
                     <span className = "ps-1 text-secondary">
-                    {checkHandle(post)} {getPostsTiming(post)}
+                    @{checkHandle(post)} {getPostsTiming(post)}
                 </span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
