@@ -68,7 +68,7 @@ const TuitItem = (
 
     return(
         <div className="mt-2 list-group-item override-lg">
-            <img className={`profile-pic float-start rounded-circle`} src={`/tuiter/images/${post.avatarIcon}`}/>
+            <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>
             <div className = "ps-5">
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(post._id)}></i>
