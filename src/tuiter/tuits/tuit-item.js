@@ -25,7 +25,7 @@ const checkIfImage = (post) => {
 }
 
 const checkProfileImage = (post) => {
-    if(post.image.length != 0){
+    if(post.image==""){
         return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>;
     }
     return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/NASA_logo.png`}/>;
