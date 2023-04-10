@@ -28,10 +28,7 @@ const checkProfileImage = (post) => {
     if(post.image.length != 0){
         return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>;
     }
-    else{
-        return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/NASA_logo.png`}/>;
-    }
-    return "";
+    return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/NASA_logo.png`}/>;
 }
 
 const checkLink = (post) => {
