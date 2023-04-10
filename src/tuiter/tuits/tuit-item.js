@@ -78,7 +78,7 @@ const TuitItem = (
 
     return(
         <div className="mt-2 list-group-item override-lg">
-
+            {checkProfileImage(post)}
             <div className = "ps-5">
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(post._id)}></i>
