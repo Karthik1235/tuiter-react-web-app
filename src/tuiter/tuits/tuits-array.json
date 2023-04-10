@@ -14,7 +14,8 @@
     "replies": "595",
     "retuits": "234",
     "likes": "456",
-    "liked": true
+    "liked": true,
+    "dislikes": 110
   },
   {
     "_id": 234,
@@ -30,7 +31,8 @@
     "replies": "130",
     "retuits": "160",
     "likes": "192",
-    "liked": false
+    "liked": false,
+    "dislikes": 120
   }
 ]
 
