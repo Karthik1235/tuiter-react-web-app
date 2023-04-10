@@ -33,9 +33,9 @@ const checkProfileImage = (post) => {
 
 const checkHandle = (post) => {
     if(post.handle!=""){
-        return @{post.handle};
+        return `@{post.handle}`;
     }
-    return @NASA;
+    return `@NASA`;
 }
 
 const checkLink = (post) => {
