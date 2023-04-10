@@ -24,6 +24,13 @@ const checkIfImage = (post) => {
     return "";
 }
 
+const checkProfileImage = (post) => {
+    if(post.image.length != 0){
+        return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>;
+    }
+    return <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/NASA_logo.png`}/>;
+}
+
 const checkLink = (post) => {
     if(post.hasLink){
         return <div>
@@ -68,7 +75,7 @@ const TuitItem = (
 
     return(
         <div className="mt-2 list-group-item override-lg">
-            <img className={`profile-pic float-start rounded-circle`} src={`../../../tuiter/images/${post.image}`}/>
+            {checkProfileImage(post)}
             <div className = "ps-5">
                 <i className="bi bi-x-lg float-end"
                    onClick={() => deleteTuitHandler(post._id)}></i>
